@@ -2,7 +2,7 @@ spring:
   application:
     name: xwj-service-gateway
   zipkin:
-    base-url: http://10.18.222.104:9411
+    base-url: http://10.18.23.134:9411
   sleuth:
     sampler:
       probability: 1
@@ -11,12 +11,7 @@ spring:
     gateway:
       discovery:
         locator:
-#        ���ݷ�����·��
           enabled: true
-#          Ĭ��·�ɹ�������url�з�������д������������ΪСд
-#          ����Сд��д,����ʹ���»���,����ᱨ
-#          ���������lowerCaseServiceId,��ֻ����Сд,����ʶ���д,���������,ֻ��ʶ���д
-#          https://blog.csdn.net/zzzgd_666/article/details/86095716
           lower-case-service-id: true
 server:
   port: 5555
@@ -25,6 +20,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://10.18.222.102:8761/eureka/,http://10.18.222.103:8761/eureka/,http://10.18.222.104:8761/eureka/
+      defaultZone: http://10.18.23.134:8761/eureka/
   instance:
     prefer-ip-address: true
